@@ -9,11 +9,23 @@
 
     //ENTRADA
 
+    let nomePessoas = ["Eduardo da Silva", "Eduardo Montandon", "Lucas Eduardo", "José da Silva", "Rafael Gonçalves"];
 
     //PROCESSAMENTO
 
+    let nomeSilva = [];
+    let nomeNaoSilva = [];
+
+    for(let nome of nomePessoas){
+        if(nome.search("Silva") >= 0){
+            nomeSilva.push(nome);
+        }else{
+            nomeNaoSilva.push(nome);
+        }
+    }
 
     //SAÍDA
 
+    document.write("Os descendentes são: " + nomeSilva.join(", ") + ". A familia possui " + nomeSilva.length + " Descendentes.");
 
 </script>

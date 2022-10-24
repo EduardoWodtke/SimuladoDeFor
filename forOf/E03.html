@@ -9,11 +9,23 @@
 
     //ENTRADA
 
+    let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
 
     //PROCESSAMENTO
-
+    let escolha;
+    let livroFic = [];
+    let livroFac = [];
+    for (let livros of listaLivros) {
+        escolha = prompt(livros + " Esse livro é Ficção ou Fato? (Fat-Fato || Fic-Ficção)").toLowerCase();
+        if(escolha === "fat"){
+            livroFac.push(livros);
+        }else{
+            livroFic.push(livros);
+        }
+    }
 
     //SAÍDA
 
+    document.write("Esses são livros baseados em fatos: " + livroFac.join(", ") + ".</br> Já esse são ficcionais: " + livroFic.join(", ") + ".");
 
 </script>

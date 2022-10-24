@@ -9,11 +9,20 @@
 
     //ENTRADA
 
+    let precoKgArroz = [3.90, 4.80, 5.75, 6.99, 7.00, 4.99, 5.19];
 
     //PROCESSAMENTO
 
+    let preco = 0;
+    for(let arroz of precoKgArroz){
+        preco = preco + arroz
+        
+    }
+
+    preco = preco / precoKgArroz.length;
 
     //SAÍDA
 
+    document.write("A média aproximada seria: " + preco.toFixed(2) + "</br>Sendo o maior preço: " + precoKgArroz.sort(((b, a) => (a - b)))[0])
 
 </script>
