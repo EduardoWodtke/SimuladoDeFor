@@ -14,11 +14,11 @@
     //PROCESSAMENTO
     let escolha;
     let livroFic = [];
-    let livroFac = [];
+    let livroTec = [];
     for (let livros of listaLivros) {
-        escolha = prompt(livros + " Esse livro é Ficção ou Fato? (Fat-Fato || Fic-Ficção)").toLowerCase();
+        escolha = prompt(livros + " Esse livro é Ficção ou Fato? (Tec-Tecnicos || Fic-Ficção)").toLowerCase();
         if(escolha === "fat"){
-            livroFac.push(livros);
+            livroTec.push(livros);
         }else{
             livroFic.push(livros);
         }
@@ -26,6 +26,6 @@
 
     //SAÍDA
 
-    document.write("Esses são livros baseados em fatos: " + livroFac.join(", ") + ".</br> Já esse são ficcionais: " + livroFic.join(", ") + ".");
+    document.write("Esses são livros baseados em fatos: " + livroTec.join(", ") + ".</br> Já esse são ficcionais: " + livroFic.join(", ") + ".");
 
 </script>

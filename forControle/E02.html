@@ -14,10 +14,22 @@
     //ENTRADA
 
 
-    //PROCESSAMENTO
+    let vezesAbastecidas = Number(prompt("Quantas vezes você abasteceu?"));
+    let distanciaPercorrida = Number(prompt("Qual a distancia percorrida? (Em quilometro)"));
 
+    //PROCESSAMENTO
+    let custoDoAbestecimento = 0;
+    let todosOsCustos = [];
+    let totalCusto = 0;
+    for(let i = 1; i <= vezesAbastecidas; i++){
+        custoDoAbestecimento = Number(prompt("Custo numero: " + i));
+        todosOsCustos.push(custoDoAbestecimento)
+        totalCusto = totalCusto + custoDoAbestecimento
+    }
+   
 
     //SAÍDA
 
+    document.write("<li>Seu total de custos foi: " + totalCusto + "</li></br><li> Total distancia percorrida foi: " + distanciaPercorrida + "</li></br><li> e todos os custos foi: " + todosOsCustos.join(", ") + "</li>");
 
 </script>

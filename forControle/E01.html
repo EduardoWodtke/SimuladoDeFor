@@ -11,14 +11,23 @@
     const quantosAlunos = parseInt(prompt("Quantos alunos tem em sala?"))
 
     //PROCESSAMENTO
-    let nome = [];
+    let nomeH = [];
+    let nomeM = [];
+    let nomeProf;
+    let genero;
 
-    for(let i = 0; i < quantosAlunos; i++){
-        let nomeProf = prompt("Informe o nome do aluno:")
-        
+    for(let i = 1; i <= quantosAlunos; i++){
+        nomeProf = prompt("Informe o nome do aluno:");
+        genero = prompt("Qual o genero do aluno? (M-Mulher || H-Homem)").toLowerCase();
+        if(genero === "m"){
+            nomeM.push(nomeProf);
+        }else{
+            nomeH.push(nomeProf);
+        }
     }
 
     //SAÍDA
 
-    
+    document.write("<li>Os nomes dos meninos são: " + nomeH.sort().join(", ") + ".</li></br><li> OS nomes das meninas são: " + nomeM.join(", ") + ".</li>")
+
 </script>
